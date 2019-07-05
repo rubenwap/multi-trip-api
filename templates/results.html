@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trip Results</title>
+</head>
+<body>
+
+<table>
+    <thead>
+        <th>Departure Datetime</th>
+        <th>Arrival Datetime</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th>Source ID</th>
+        <th>Destination ID</th>
+        <th>Free Seats</th>
+        <th>Carrier</th>
+
+    </thead>
+    <tbody>
+{% for station_combination in trips %}
+{% for travel in station_combination %}
+<tr>
+
+{% for key, value in travel.items() %}
+
+<td>{{value}}</td>
+
+{% endfor %}
+</tr>
+
+{% endfor %}
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
