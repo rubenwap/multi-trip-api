@@ -1,0 +1,18 @@
+<html>
+
+<head>
+    <title>Search Result Page</title>
+</head>
+
+<body>
+    <form action = "{{ url_for('results') }}" method="post">
+    {{ form.origin.label }} {{ form.origin(size=20) }}</br>
+    {{ form.destination.label }} {{ form.destination(size=20) }}</br>
+    {{ form.departing.label }} {{ form.departing(size=20, type='date') }}</br>
+    {{ form.arriving.label }} {{ form.arriving(size=20, type='date') }}</br>
+    {{ form.passengers.label }} {{ form.passengers(size=20, type='number') }}</br>
+    <input type="submit" value="Find Trips">
+</form>
+</body>
+
+</html>
